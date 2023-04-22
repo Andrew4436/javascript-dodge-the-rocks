@@ -11,7 +11,6 @@ const rootFontSizeNumber = parseFloat(rootFontSize);
 let characterSpeed = 150;
 let obstacleAmount = 6;
 let obstacleSpeed = 2000;
-let obstacleInterval = 3000;
 let interval;
 let interval2;
 let gameover = false;
@@ -24,7 +23,7 @@ function startGame() {
   document.addEventListener("mousemove", moveCharacter);
 
   //intervals
-  interval = setInterval(generateObstacle, obstacleInterval);
+  interval = setInterval(generateObstacle, 3000);
   interval2 = setInterval(checkCollision, 10);
 
 
@@ -39,42 +38,34 @@ function startGame() {
     if (score.innerText >= 5) {
       obstacleAmount = 8;
       obstacleSpeed = 1800;
-      obstacleInterval = 2500;
     }
     if (score.innerText >= 10) {
       obstacleAmount = 10;
       obstacleSpeed = 1700;
-      obstacleInterval = 2300;
     }
     if (score.innerText >= 15) {
       obstacleAmount = 12;
       obstacleSpeed = 1600;
-      obstacleInterval = 2200;
     }
     if (score.innerText >= 20) {
       obstacleAmount = 14;
       obstacleSpeed = 1500;
-      obstacleInterval = 2000;
     }
     if (score.innerText >= 25) {
       obstacleAmount = 15;
       obstacleSpeed = 1400;
-      obstacleInterval = 1800;
     }
     if (score.innerText >= 30) {
       obstacleAmount = 17;
       obstacleSpeed = 1300;
-      obstacleInterval = 1600;
     }
     if (score.innerText >= 35) {
       obstacleAmount = 20;
       obstacleSpeed = 1200;
-      obstacleInterval = 1400;
     }
     if (score.innerText >= 50) {
       score.innerText = "LEVEL: IMPOSSIBLE";
-      obstacleSpeed = 900;
-      obstacleInterval = 1200;
+      obstacleSpeed = 400;
     }
 
     for (let i = 0; i < obstacleAmount; i++) {
