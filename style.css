@@ -39,11 +39,12 @@
     top: -5rem;
     width: 5rem;
     aspect-ratio: 1/1;
-    background: white url("./imgs/theRock.png");
+    background-color: red
+/*     background: white url("./imgs/theRock.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 150%;
-    background-position: 50% 50%;
+    background-position: 50% 50%; */
 }
 
 #start-msg {
